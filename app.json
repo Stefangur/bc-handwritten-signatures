@@ -1,8 +1,8 @@
 {
   "id": "df21a394-73bf-4093-9dbf-1f0f57b2d615",
   "name": "Signature",
-  "publisher": "Default publisher",
-  "version": "1.0.0.0",
+  "publisher": "Amathan GmbH",
+  "version": "1.0.0.1",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -16,8 +16,8 @@
   "application": "19.0.0.0",
   "idRanges": [
     {
-      "from": 55000,
-      "to": 56000
+      "from": 80500,
+      "to": 80900
     }
   ],
   "resourceExposurePolicy": {

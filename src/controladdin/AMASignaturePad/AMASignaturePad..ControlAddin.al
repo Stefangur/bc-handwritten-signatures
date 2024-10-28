@@ -1,4 +1,4 @@
-controladdin "SGN SGNSignaturePad"
+controladdin "AMA SignaturePad"
 {
     MaximumHeight = 720;
     MinimumHeight = 400;

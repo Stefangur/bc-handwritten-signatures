@@ -1,8 +1,8 @@
-tableextension 55000 "SGN Ext. Sales Header" extends "Sales Header"
+tableextension 80500 "AMA Ext. Sales Header" extends "Sales Header"
 {
     fields
     {
-        field(55000; "SGN Signature"; Blob)
+        field(55000; "AMA Signature"; Blob)
         {
             Caption = 'Customer Signature';
             DataClassification = CustomerContent;
@@ -10,7 +10,7 @@ tableextension 55000 "SGN Ext. Sales Header" extends "Sales Header"
         }
     }
 
-    procedure SignDocument(var Base64Text: Text)
+    internal procedure SignDocument(var Base64Text: Text)
     var
         Base64Cu: Codeunit "Base64 Convert";
         RecordRef: RecordRef;
@@ -22,7 +22,7 @@ tableextension 55000 "SGN Ext. Sales Header" extends "Sales Header"
         TempBlob.CreateOutStream(OutStream);
         Base64Cu.FromBase64(Base64Text, OutStream);
         RecordRef.GetTable(Rec);
-        TempBlob.ToRecordRef(RecordRef, Rec.FieldNo("SGN Signature"));
+        TempBlob.ToRecordRef(RecordRef, Rec.FieldNo("AMA Signature"));
         RecordRef.Modify();
     end;
 }

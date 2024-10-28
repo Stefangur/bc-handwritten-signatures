@@ -8,7 +8,7 @@ function InitializeSignaturePad() {
 
   let submitButton = document.createElement("button");
   submitButton.id = "signDocument";
-  submitButton.innerHTML = "Sign document";
+  submitButton.innerHTML = "Unterschreiben";
 
   let signatureLocation = document.getElementById("controlAddIn");
 
@@ -21,7 +21,7 @@ function InitializeSignaturePad() {
 
   submitButton.addEventListener("click", function (event) {
     if (signaturePad.isEmpty()) {
-      alert("Please enter signature...");
+      alert("Bitte unterschreiben Sie...");
     } else {
       var base64String = signaturePad.toDataURL();
       Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("Sign",[base64String])
