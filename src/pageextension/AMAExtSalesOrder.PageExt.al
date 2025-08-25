@@ -30,6 +30,7 @@ pageextension 80500 "AMA Ext. Sales Order" extends "Sales Order"
         //         Editable = false;
         //     }
         // }
+        
         addfirst(factboxes)
         {
             part("AM Sign Factbox"; "AMA Sign Factbox")
