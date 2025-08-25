@@ -1,6 +1,7 @@
 codeunit 80500 "AMA Upgrade CU1"
 {
     Subtype = Upgrade;
+    Permissions = tabledata "Sales Shipment Header" = rm;
 
     trigger OnUpgradePerCompany()
     var

@@ -1,5 +1,7 @@
 codeunit 55001 "SGU Signature Subscriber"
 {
+    Permissions = tabledata "Sales Shipment Header" = rm;
+    
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnInsertShipmentHeaderOnAfterTransferfieldsToSalesShptHeader', '', false, false)]
     local procedure "Sales-Post_OnInsertShipmentHeaderOnAfterTransferfieldsToSalesShptHeader"(SalesHeader: Record "Sales Header"; var SalesShptHeader: Record "Sales Shipment Header")
     begin
